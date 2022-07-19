@@ -6,19 +6,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 		},
 		actions: {
 
-			getCharacters: () => {
-				fetch("https://www.swapi.tech/api/people/")
+			getCharacters: async () => {
+				try {
+					await fetch("https://www.swapi.tech/api/people/")
 					.then(res => res.json())
 					.then(data => {
 						setStore({ characters: data.results })
-						console.log(data.results)
+						console.log(characters)
 					})
-					.catch(err => console.error(err))
+				} catch (error) {
+				console.log(`No se ha podido cargar la imagen error: ${error}`)	
+				}
+				
 
 			},
 
-			getPlanets: () => {
-				fetch("https://www.swapi.tech/api/planets/")
+			getPlanets: async () => {
+				await fetch("https://www.swapi.tech/api/planets/")
 					.then(res => res.json())
 					.then(data => {
 						setStore({ planets: data.results })
