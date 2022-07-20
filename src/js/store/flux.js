@@ -7,7 +7,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 			propiedades: []
 		},
 		actions: {
-
 			getCharacters: async () => {
 				try {
 					await fetch("https://www.swapi.tech/api/people/")

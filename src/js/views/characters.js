@@ -13,8 +13,7 @@ export const Characters = () => {
 	}, [])
 
 	const datoscharacters = store.characters;  
-
-
+	const img= "https://static.wikia.nocookie.net/esstarwars/images/1/15/Luke_Skywalker_Ep_7_SWCT.png/revision/latest?cb=20170215060145"
 
 	return (
 
@@ -24,7 +23,7 @@ export const Characters = () => {
 				{ datoscharacters.length > 0 && datoscharacters.map((el) => {
 
 					return (
-						<Card uid={el.uid} name={el.name} url={url}/>
+						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
 					)
 				}
 				)}				
