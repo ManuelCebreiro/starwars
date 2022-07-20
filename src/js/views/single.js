@@ -4,23 +4,29 @@ import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const Single = props => {
+
 	const { store, actions } = useContext(Context);
-	const params = useParams();
-	return (
-		<div className="jumbotron">
-			<h1 className="display-4">This will show the demo element: {store.demo[params.theid].title}</h1>
+	// const params = useParams();
 
-			<hr className="my-4" />
+	useEffect(() => {
+		actions.getPropertiesCharacters()
+	}, [])
 
-			<Link to="/">
-				<span className="btn btn-primary btn-lg" href="#" role="button">
-					Back home
-				</span>
-			</Link>
-		</div>
+	const fichapersonaje = store.propiedades;	
+
+	{
+		fichapersonaje.map((ele) => {
+			return (
+				<div className="jumbotron">
+					<h1 className="display-4">{ele.name}</h1>
+					<p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+					<hr className="my-4 bg-warning" />
+					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+					<a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				</div>
 	);
-};
-
+	})};
+}
 Single.propTypes = {
 	match: PropTypes.object
 };

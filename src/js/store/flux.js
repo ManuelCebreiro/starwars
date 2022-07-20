@@ -15,23 +15,42 @@ const getState = ({ getStore, getActions, setStore }) => {
 						console.log(characters)
 					})
 				} catch (error) {
-				console.log(`No se ha podido cargar la imagen error: ${error}`)	
+				console.log(`No se ha podido cargar el personaje error: ${error}`)	
 				}
 				
 
 			},
+			// getPropertiesCharacters: async () => {
+			// 	try {
+			// 		await fetch("https://www.swapi.tech/api/people/1")
+			// 		.then(res => res.json())
+			// 		.then(data => {
+			// 			setStore({ propiedades: data.results })
+			// 			console.log(propiedades)
+			// 		})
+			// 	} catch (error) {
+			// 	console.log(`No se ha podido cargar los datos error: ${error}`)	
+			// 	}
+				
+
+			// },
+
+			
 
 			getPlanets: async () => {
-				await fetch("https://www.swapi.tech/api/planets/")
+				try {
+					await fetch("https://www.swapi.tech/api/planets/")
 					.then(res => res.json())
 					.then(data => {
 						setStore({ planets: data.results })
-						console.log(data.results)
+						// console.log(data.results)
 					})
-					.catch(err => console.error(err))
+				} catch (error) {
+				console.log(`No se ha podido cargar el planeta error: ${error}`)	
+				}
+				
 
 			},
-
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");
