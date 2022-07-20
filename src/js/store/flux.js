@@ -3,7 +3,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
-			vehicles: []
+			vehicles: [],
+			propiedades: []
 		},
 		actions: {
 
@@ -26,8 +27,8 @@ const getState = ({ getStore, getActions, setStore }) => {
 					await fetch("https://www.swapi.tech/api/people/1")
 					.then(res => res.json())
 					.then(data => {
-						setStore({ propiedades: data.results })
-						console.log(propiedades)
+						setStore({ propiedades: data.result.properties  })
+						console.log(data)
 					})
 				} catch (error) {
 				console.log(`No se ha podido cargar los datos error: ${error}`)	

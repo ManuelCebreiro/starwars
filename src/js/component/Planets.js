@@ -16,13 +16,13 @@ export const Planets = () => {
 
 
 	return(
-<div className="d-flex flex-wrap" >
+<div className="container-fluid py-2 overflow-x" id="scrollhorizontal" >
 			<h1 style={{ color: "red" }}>Planets</h1>
-			<div className="row">
+			<div className="d-flex flex-row flex-nowrap">
 				{datosplanetas.map((ele) => {
 
 					return (
-						<div className="text-center mx-3 my-3" style={{ width: "18rem" }}>
+						<div className="col-3 text-center mx-3 my-3" style={{ width: "18rem" }}>
 							<div key={ele.uid} className="card" style={{ width: "18rem" }}>
 								<img src="..." className="card-img-top" alt="..."></img>
 								<div className="card-body">
@@ -41,9 +41,7 @@ export const Planets = () => {
 
 
 	
-				<p>Si ves esto, es que la pagina tarda en cargar los personajes (arreglalo manu)
-
-				</p>
+				
 			</div>
 		</div>
 	)

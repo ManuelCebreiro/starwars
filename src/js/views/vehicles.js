@@ -15,10 +15,10 @@ export const Vehicles = () => {
 
 
 
-	return(
-<div className="d-flex flex-wrap" >
+	return (
+		<div className="container-fluid py-2" id="scrollhorizontal" >
 			<h1 style={{ color: "red" }}>Vehicles</h1>
-			<div className="row">
+			<div className="d-flex flex-row flex-nowrap">
 				{datosvehiculos.map((ele) => {
 
 					return (
@@ -39,14 +39,9 @@ export const Vehicles = () => {
 
 				)}
 
-
-	
-				<p>Si ves esto, es que la pagina tarda en cargar los personajes (arreglalo manu)
-
-				</p>
 			</div>
 		</div>
 	)
-			}
+}
 
-			export default Vehicles
+export default Vehicles
