@@ -20,7 +20,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(`No se ha podido cargar el personaje error: ${error}`)	
 				}
 				
-
 			},
 			getPropertiesCharacters: async () => {
 				try {
@@ -36,8 +35,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				
 
 			},
-
-			
 
 			getPlanets: async () => {
 				try {
