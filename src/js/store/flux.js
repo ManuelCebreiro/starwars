@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
+			vehicles: []
 		},
 		actions: {
 
@@ -20,20 +21,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				
 
 			},
-			// getPropertiesCharacters: async () => {
-			// 	try {
-			// 		await fetch("https://www.swapi.tech/api/people/1")
-			// 		.then(res => res.json())
-			// 		.then(data => {
-			// 			setStore({ propiedades: data.results })
-			// 			console.log(propiedades)
-			// 		})
-			// 	} catch (error) {
-			// 	console.log(`No se ha podido cargar los datos error: ${error}`)	
-			// 	}
+			getPropertiesCharacters: async () => {
+				try {
+					await fetch("https://www.swapi.tech/api/people/1")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ propiedades: data.results })
+						console.log(propiedades)
+					})
+				} catch (error) {
+				console.log(`No se ha podido cargar los datos error: ${error}`)	
+				}
 				
 
-			// },
+			},
 
 			
 
@@ -47,6 +48,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 					})
 				} catch (error) {
 				console.log(`No se ha podido cargar el planeta error: ${error}`)	
+				}
+				
+
+			},
+
+			getVehicles: async () => {
+				try {
+					await fetch("https://www.swapi.tech/api/vehicles/")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ vehicles: data.results })
+						// console.log(data.results)
+					})
+				} catch (error) {
+				console.log(`No se ha podido cargar el vehiculo error: ${error}`)	
 				}
 				
 

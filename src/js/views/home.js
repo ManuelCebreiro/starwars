@@ -3,6 +3,9 @@ import { Context } from "../store/appContext";
 import "../../styles/home.css";
 import { element } from "prop-types";
 import Demo from "./demo";
+import Planets from "../component/Planets";
+import Vehicles from "./vehicles";
+
 
 
 
@@ -15,7 +18,7 @@ export const Home = () => {
 	}, [])
 
 	const auxdatos = store.characters;		//array de personajes
-	const datosplanetas = store.planets;	//array de planetas
+	// const datosplanetas = store.planets;	//array de planetas
 
 
 	// console.log(auxdatos);   
@@ -24,7 +27,7 @@ export const Home = () => {
 		<div className="d-flex flex-wrap" >
 			<h1 style={{ color: "red" }}>Characters</h1>
 			<div className="row">
-				{auxdatos.map((el) => {
+				{ store.characters.length > 0 && auxdatos.map((el) => {
 
 					return (
 						<div className="text-center mx-3 my-3" style={{ width: "18rem" }}>
@@ -43,7 +46,8 @@ export const Home = () => {
 				)}
 				<p>Si ves esto, es que la pagina tarda en cargar los personajes (arreglalo manu)</p>
 			</div>
-			<Demo/>
+			<Planets/>
+			<Vehicles/>
 		</div>
 		
 	// ,

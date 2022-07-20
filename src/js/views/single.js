@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const Single = props => {
 
 	const { store, actions } = useContext(Context);
-	// const params = useParams();
+	const params = useParams();
 
 	useEffect(() => {
 		actions.getPropertiesCharacters()
@@ -18,7 +18,7 @@ export const Single = props => {
 		fichapersonaje.map((ele) => {
 			return (
 				<div className="jumbotron">
-					<h1 className="display-4">{ele.name}</h1>
+					<h1 className="display-4">jaja</h1>
 					<p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
 					<hr className="my-4 bg-warning" />
 					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>

@@ -8,46 +8,16 @@ import "../../styles/demo.css";
 export const Demo = () => {
 	const { store, actions } = useContext(Context);
 
-	useEffect(() => {
-		actions.getPlanets()
-	}, [])
-
-	const datosplanetas = store.planets;
 
 
 
-	return(
-<div className="d-flex flex-wrap" >
-			<h1 style={{ color: "red" }}>Planets</h1>
-			<div className="row">
-				{datosplanetas.map((ele) => {
-
-					return (
-						<div className="text-center mx-3 my-3" style={{ width: "18rem" }}>
-							<div key={ele.uid} className="card" style={{ width: "18rem" }}>
-								<img src="..." className="card-img-top" alt="..."></img>
-								<div className="card-body">
-									<h5 className="card-title">{ele.name}</h5>
-									<p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
-									<a href="{el.url}" className="btn btn-primary">Go somewhere</a>
-								</div>
-							</div>
-						</div>
-
-					)
-				}
-
-
-				)}
-
-
-	
-				<p>Si ves esto, es que la pagina tarda en cargar los personajes (arreglalo manu)
-
-				</p>
-			</div>
-		</div>
-	)
-			}
-
-			export default Demo
+			return (
+				<div className="jumbotron">
+					<h1 className="display-4">jaja</h1>
+					<p className="lead">This is a simple hero unit, a simple jumbotron-style component for calling extra attention to featured content or information.</p>
+					<hr className="my-4 bg-warning" />
+					<p>It uses utility classes for typography and spacing to space content out within the larger container.</p>
+					<a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+				</div>
+	);
+	};
