@@ -7,9 +7,6 @@ import Planets from "../component/Planets";
 import Vehicles from "./vehicles";
 import Characters from "./characters";
 
-
-
-
 export const Home = () => {
 
 	const { store, actions } = useContext(Context);

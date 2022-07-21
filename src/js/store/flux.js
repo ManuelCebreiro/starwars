@@ -4,7 +4,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 			characters: [],
 			planets: [],
 			vehicles: [],
-			propiedades: []
+			propiedades: [],
+			favoritos:[],
+			datos:[]
 		},
 		actions: {
 			getCharacters: async () => {
@@ -61,9 +63,23 @@ const getState = ({ getStore, getActions, setStore }) => {
 				} catch (error) {
 				console.log(`No se ha podido cargar el vehiculo error: ${error}`)	
 				}
-				
-
 			},
+			getId: (url) => {
+
+				fetch(url)
+				  .then((res) => {
+					if (res.ok) {
+					  return res.json();
+					} else {
+					  throw new Error("los planetas  no se han podido cargar");
+					}
+				  })
+				  .then((datos) => {
+					let aux =datos.result.properties;
+					console.log(aux)
+					setStore({ datos: aux });
+			  })
+			  },
 			// Use getActions to call a function within a fuction
 			exampleFunction: () => {
 				getActions().changeColor(0, "green");

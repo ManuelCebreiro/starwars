@@ -2,7 +2,6 @@ import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 import { Card } from "../component/card";
-
 import "../../styles/demo.css";
 
 export const Characters = () => {
@@ -12,8 +11,9 @@ export const Characters = () => {
 		actions.getCharacters()
 	}, [])
 
+	
 	const datoscharacters = store.characters;  
-	const img= "https://static.wikia.nocookie.net/esstarwars/images/1/15/Luke_Skywalker_Ep_7_SWCT.png/revision/latest?cb=20170215060145"
+	const img= "https://www.prensalibre.com/wp-content/uploads/2019/11/luke-skywalker-644x362.jpg?quality=52"
 
 	return (
 
@@ -24,6 +24,7 @@ export const Characters = () => {
 
 					return (
 						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
+						
 					)
 				}
 				)}				

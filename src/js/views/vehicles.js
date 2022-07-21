@@ -12,13 +12,14 @@ export const Vehicles = () => {
 	}, [])
 
 	const datosvehiculos = store.vehicles;
+	const img = "https://elcomercio.pe/resizer/_jenrsQckC0AT7Cn3_xrbfAaj8A=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/VDBO46ZDFJANRILHPBPBKBULAA.jpg"
 	return (
 		<div className="container-fluid py-2" id="scrollhorizontal" >
 			<h1 style={{ color: "red" }}>Vehicles</h1>
 			<div className="d-flex flex-row flex-nowrap">
 				{datosvehiculos.map((el) => {
 					return (
-						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} />
+						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
 					)
 				}
 				)}
