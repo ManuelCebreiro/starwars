@@ -2,3 +2,20 @@
 
     overflow-x: scroll;
 }
+
+body{
+    background-image: url("https://i.pinimg.com/originals/d7/a6/11/d7a61190a836bdcfc62bf97af4f4c74b.png");
+}
+
+.cartacss{
+background-color: white;
+box-shadow: none;
+
+}
+
+.cartacss:hover{
+    background-color: #fff;
+
+    box-shadow: 0px 2px 12px 4px #0ff;
+    
+}

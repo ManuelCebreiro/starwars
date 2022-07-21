@@ -9,8 +9,8 @@ export const Card = ({ uid, name, url, img }) => {
 
     return (
 
-        <div className="text-center mx-3 my-3" style={{ width: "18rem" }}>
-            <div key={uid} className="card" style={{ width: "18rem" }}>
+        <div className="cartacss text-center mx-3 my-3" style={{ width: "18rem" }}>
+            <div key={uid} className="card " style={{ width: "18rem" }}>
                 <img src={img} className="card-img-top" alt="..."></img>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
