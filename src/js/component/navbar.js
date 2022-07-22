@@ -1,5 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import Dropdown from 'react-bootstrap/Dropdown';
+
 
 export const Navbar = () => {
 	const img = "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
@@ -12,16 +14,20 @@ export const Navbar = () => {
 			</Link>
 			<div className="ml-auto">
 				{/* <Link to="/Demo"> */}
-				<div class="dropdown">
-					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Favorites
-						<span class="caret"></span></button>
-					<ul class="dropdown-menu">
-						<li><a href="#">Primera opcion</a></li>
-						<li><a href="#">Segunda opcion</a></li>
-						<li><a href="#">Tercera opcion</a></li>
-					</ul>
-				</div>
-				
+				<Dropdown>
+					<Dropdown.Toggle variant="primary" id="dropdown-basic">
+						Dropdown Button
+					</Dropdown.Toggle>
+
+					<Dropdown.Menu>
+						
+						<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
+						<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
+						<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+					</Dropdown.Menu>
+				</Dropdown>
+
+
 				{/* </Link> */}
 			</div>
 		</nav>
