@@ -4,7 +4,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
 
-export const Demo = (planet) => {
+export const Infloplanets = (planet) => {
 	const { store, actions } = useContext(Context);
 	const datospersonales = store.datos;
     console.log(datospersonales)

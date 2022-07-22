@@ -23,7 +23,7 @@ export const Characters = () => {
 				{ datoscharacters.length > 0 && datoscharacters.map((el) => {
 
 					return (
-						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
+						<Card demo={"characters"} uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
 						
 					)
 				}
