@@ -10,23 +10,65 @@ export const Demo = (name) => {
 	console.log(datospersonales)
 
 	return (
-		
+
 		<div className="jumbotron ">
-			<h1 className="display-4">{datospersonales.name}</h1>
-			<p className="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non eleifend ex. Aliquam efficitur venenatis diam, sed tincidunt nulla tempus sed. Duis consectetur nisi ligula, eget bibendum augue elementum mattis. Nulla fringilla lacus tortor, sed sagittis magna commodo eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo nisl eget augue vestibulum aliquam. Etiam nec luctus risus.</p>
-			<hr className="hr my-4" />
-			<div class="row">
-				<div class="col">
-					Primera de tres columnas
+			<div className="row">
+				<div className="col">
+					<img id="img2" src="https://starwarsblog.starwars.com/wp-content/uploads/2017/03/darth-vader-1-cover-header-1536x864.jpg" />
 				</div>
-				<div class="col">
-					Segunda de tres columnas
-				</div>
-				<div class="col">
-					Tercera de tres columnas
+				<div className="col">
+					<h1 className="display-4 text-center mt-4">{datospersonales.name}</h1>
+					<p className="lead p-4">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam non eleifend ex. Aliquam efficitur venenatis diam, sed tincidunt nulla tempus sed. Duis consectetur nisi ligula, eget bibendum augue elementum mattis. Nulla fringilla lacus tortor, sed sagittis magna commodo eget. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin commodo nisl eget augue vestibulum aliquam. Etiam nec luctus risus.</p>
 				</div>
 			</div>
-			<a className="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+			<hr className="hr my-4" />
+			<div class="row fs-4">
+				<div class="col">
+					<strong>Name</strong>
+				</div>
+				<div class="col">
+					<strong>Birthday</strong>
+				</div>
+				<div class="col">
+					<strong>Gender</strong>
+				</div>
+				<div class="col">
+					<strong>Height</strong>
+				</div>
+				<div class="col">
+					<strong>Skin-color</strong>
+				</div>
+				<div class="col">
+					<strong>Eye-color</strong>
+				</div>
+			</div>
+			<div class="row">
+				<div class="col fs-5">
+					{datospersonales.name}
+				</div>
+				<div class="col fs-5">
+					{datospersonales.birth_year}
+				</div>
+				<div class="col fs-5">
+					{datospersonales.gender}
+				</div>
+				<div class="col fs-5">
+					{datospersonales.height}
+				</div>
+				<div class="col fs-5">
+					{datospersonales.skin_color}
+				</div>
+				<div class="col fs-5">
+					{datospersonales.eye_color}
+				</div>
+			</div>
+			<Link to="/">
+				<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" id="atras" class="bi bi-arrow-left-square-fill black" viewBox="0 0 16 16">
+					<path d="M16 14a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V2a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v12zm-4.5-6.5H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5a.5.5 0 0 0 0-1z" />
+				</svg>
+			</Link>
+
 		</div>
+
 	);
 };

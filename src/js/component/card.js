@@ -18,7 +18,7 @@ export const Card = ({ uid, name, url, img }) => {
                     <div className="d-flex justify-content-between">
                         <div>
                             <Link to={`/Demo/${name}`} onClick={() => actions.getId(url)}>
-                                <a className="btn btn-primary">Leer más</a>
+                                <a className="btn btn-outline-primary">Leer más</a>
                             </Link>
 
                         </div>

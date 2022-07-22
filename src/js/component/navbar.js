@@ -2,18 +2,26 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 export const Navbar = () => {
-	const img ="https://i.pinimg.com/originals/b6/af/5a/b6af5aeff0ee43a4253fc70c167bb6db.png"
+	const img = "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 px-4 bg-black">
 			<Link to="/">
-			<img src={img}
-			width="75 px"
-			height="75 px"></img>
+				<img id="img1" src={img}>
+				</img>
 
 			</Link>
 			<div className="ml-auto">
 				{/* <Link to="/Demo"> */}
-					<button className="btn btn-primary">Favorites</button>
+				<div class="dropdown">
+					<button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Favorites
+						<span class="caret"></span></button>
+					<ul class="dropdown-menu">
+						<li><a href="#">Primera opcion</a></li>
+						<li><a href="#">Segunda opcion</a></li>
+						<li><a href="#">Tercera opcion</a></li>
+					</ul>
+				</div>
+				
 				{/* </Link> */}
 			</div>
 		</nav>
