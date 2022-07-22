@@ -26,19 +26,19 @@ export const Infovehicles = (planet) => {
 					<strong>Name</strong>
 				</div>
 				<div className="col">
-					<strong>model</strong>
+					<strong>Model</strong>
 				</div>
 				<div className="col">
-					<strong>vehicle_class</strong>
+					<strong>Vehicle Class</strong>
 				</div>
 				<div className="col">
-					<strong>length</strong>
+					<strong>Length</strong>
 				</div>
 				<div className="col">
-					<strong>cargo_capacity</strong>
+					<strong>Cargo Capacity</strong>
 				</div>
 				<div className="col">
-					<strong>max_atmosphering_speed</strong>
+					<strong>Max Speed</strong>
 				</div>
 			</div>
 			<div className="row">
