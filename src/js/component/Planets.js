@@ -23,7 +23,7 @@ export const Planets = () => {
 				{datosplanetas.map((el) => {
 
 						return (
-							<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
+							<Card uid={el.population} name={el.name} url={el.url} key={el.uid} img={img}/>
 						)
 
 					

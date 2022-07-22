@@ -7,14 +7,14 @@ import "../../styles/demo.css";
 export const Demo = (name) => {
 	const { store, actions } = useContext(Context);
 	const datospersonales = store.datos;
-	console.log(datospersonales)
+    console.log(datospersonales)
 
 	return (
 
 		<div className="jumbotron ">
 			<div className="row">
 				<div className="col">
-					<img id="img2" src="https://starwarsblog.starwars.com/wp-content/uploads/2017/03/darth-vader-1-cover-header-1536x864.jpg" />
+					<img id="img2" src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d71e379b-3f09-42b2-b3fe-26548591a750/dev17yq-ce816241-f6aa-444a-94b6-7104f945e050.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7InBhdGgiOiJcL2ZcL2Q3MWUzNzliLTNmMDktNDJiMi1iM2ZlLTI2NTQ4NTkxYTc1MFwvZGV2MTd5cS1jZTgxNjI0MS1mNmFhLTQ0NGEtOTRiNi03MTA0Zjk0NWUwNTAuanBnIn1dXSwiYXVkIjpbInVybjpzZXJ2aWNlOmZpbGUuZG93bmxvYWQiXX0.XmhMzTExSOrmbu-HzPseIJ_H09JyCOV8S3UrqpE9Kfg" />
 				</div>
 				<div className="col">
 					<h1 className="display-4 text-center mt-4">{datospersonales.name}</h1>
@@ -27,19 +27,19 @@ export const Demo = (name) => {
 					<strong>Name</strong>
 				</div>
 				<div className="col">
-					<strong>Birthday</strong>
+					<strong>Population</strong>
 				</div>
 				<div className="col">
-					<strong>Gender</strong>
+					<strong>Climate</strong>
 				</div>
 				<div className="col">
-					<strong>Height</strong>
+					<strong>Terrain</strong>
 				</div>
 				<div className="col">
-					<strong>Skin-color</strong>
+					<strong>Rotation_period</strong>
 				</div>
 				<div className="col">
-					<strong>Eye-color</strong>
+					<strong>Orbital_period</strong>
 				</div>
 			</div>
 			<div className="row">
@@ -47,19 +47,19 @@ export const Demo = (name) => {
 					{datospersonales.name}
 				</div>
 				<div className="col fs-5">
-					{datospersonales.birth_year}
+					{datospersonales.population}
 				</div>
 				<div className="col fs-5">
-					{datospersonales.gender}
+					{datospersonales.climate}
 				</div>
 				<div className="col fs-5">
-					{datospersonales.height}
+					{datospersonales.terrain}
 				</div>
 				<div className="col fs-5">
-					{datospersonales.skin_color}
+					{datospersonales.rotation_period}
 				</div>
 				<div className="col fs-5">
-					{datospersonales.eye_color}
+					{datospersonales.orbital_period}
 				</div>
 			</div>
 			<Link to="/">

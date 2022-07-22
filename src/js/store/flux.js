@@ -3,6 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			characters: [],
 			planets: [],
+			planetsdetalles:[],
 			vehicles: [],
 			propiedades: [],
 			favoritos:[],
@@ -44,6 +45,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => {
 						setStore({ planets: data.results })
 						// console.log(data.results)
+					})
+				} catch (error) {
+				console.log(`No se ha podido cargar el planeta error: ${error}`)	
+				}
+				
+
+			},
+			getPlanetsDetails: async () => {
+				try {
+					await fetch("https://www.swapi.tech/api/planets/")
+					.then(res => res.json())
+					.then(data => {
+						setStore({ planetsdetalles: data.result.properties })
+						console.log(data.result.properties)
 					})
 				} catch (error) {
 				console.log(`No se ha podido cargar el planeta error: ${error}`)	
