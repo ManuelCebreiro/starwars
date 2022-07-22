@@ -9,7 +9,7 @@ import { Infloplanets } from "./views/infoplanets";
 import injectContext from "./store/appContext";
 import { Navbar } from "./component/navbar";
 import { Footer } from "./component/footer";
-
+import { Infovehicles } from "./views/infovehicles";
 //create your first component
 const Layout = () => {
 	//the basename is used when your project is published in a subdirectory and not in the root of the domain
@@ -31,9 +31,9 @@ const Layout = () => {
 						<Route exact path="/infoplanets/:name">
 							<Infloplanets />
 						</Route>
-						{/* <Route exact path="/single">
-							<Single />
-						</Route> */}
+						<Route exact path="/infovehicles/:name">
+							<Infovehicles />
+						</Route>
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

@@ -19,7 +19,7 @@ export const Vehicles = () => {
 			<div className="d-flex flex-row flex-nowrap">
 				{datosvehiculos.map((el) => {
 					return (
-						<Card uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
+						<Card demo={"infovehicles"} uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
 					)
 				}
 				)}
