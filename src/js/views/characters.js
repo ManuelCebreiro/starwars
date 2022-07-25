@@ -13,7 +13,7 @@ export const Characters = () => {
 
 	
 	const datoscharacters = store.characters;  
-	const img= "https://www.prensalibre.com/wp-content/uploads/2019/11/luke-skywalker-644x362.jpg?quality=52"
+	// const img= "https://www.prensalibre.com/wp-content/uploads/2019/11/luke-skywalker-644x362.jpg?quality=52"
 
 	return (
 
@@ -23,7 +23,7 @@ export const Characters = () => {
 				{ datoscharacters.length > 0 && datoscharacters.map((el) => {
 
 					return (
-						<Card demo={"characters"} uid={el.uid} name={el.name} url={el.url} key={el.uid} img={img}/>
+						<Card demo={"characters"} uid={el.uid} name={el.name} url={el.url}/>
 						
 					)
 				}

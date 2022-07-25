@@ -3,7 +3,7 @@ import React, { useContext, useState, useEffect } from "react";
 import { Context } from "../store/appContext";
 
 
-export const Card = ({ uid, name, url, img, demo }) => {
+export const Card = ({ uid, name, url, demo }) => {
     // console.log(url)
     const { store, actions } = useContext(Context);
 
@@ -11,7 +11,7 @@ export const Card = ({ uid, name, url, img, demo }) => {
 
         <div className="cartacss text-center mx-3 my-3" style={{ width: "18rem" }}>
             <div key={uid} className="card " style={{ width: "18rem" }}>
-                <img src={img} className="card-img-top" alt="..."></img>
+                <img src={`https://starwars-visualguide.com/assets/img/${demo}/${uid}.jpg`} className="card-img-top" alt="..."></img>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
