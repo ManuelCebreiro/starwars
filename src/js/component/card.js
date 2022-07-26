@@ -19,7 +19,7 @@ export const Card = ({ uid, name, url, demo }) => {
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
                     <div className="d-flex justify-content-between">
                         <div>
-                            <Link to={`/${demo}/${name}`} onClick={() => actions.getId(url)}>
+                            <Link to={`/${demo}/${name}/${uid}`} onClick={() => actions.getId(url)}>
                                 <a className="btn btn-outline-primary">Leer más</a>
                             </Link>
 

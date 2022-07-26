@@ -13,8 +13,9 @@ const getState = ({ getStore, getActions, setStore }) => {
 		{
 
 			setfavoritos: (name) => {
-			let eliminados = getStore().favoritos.filter(valor => valor == name)
+			let eliminados = getStore().favoritos.filter(valor => valor == name)   //array de elemento filtrado para que no se repita
 				if(eliminados.length == 0){
+
 					setStore({ favoritos: [...getStore().favoritos, name] })			//una vez que el if se cumple, el setstore funciona
 				}
 			},

@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
@@ -7,13 +7,14 @@ import "../../styles/demo.css";
 export const Infovehicles = (planet) => {
 	const { store, actions } = useContext(Context);
 	const datosvehiculos = store.datos;
+	const params = useParams()   //hace un objeto con las urls dinamicas
 
 	return (
 
 		<div className="jumbotron ">
 			<div className="row">
 				<div className="col">
-					<img id="img2" src="https://elcomercio.pe/resizer/_jenrsQckC0AT7Cn3_xrbfAaj8A=/980x0/smart/filters:format(jpeg):quality(75)/arc-anglerfish-arc2-prod-elcomercio.s3.amazonaws.com/public/VDBO46ZDFJANRILHPBPBKBULAA.jpg"/>
+					<img id="img2" src={`https://starwars-visualguide.com/assets/img/vehicles/${params.theid}.jpg`}/>
 				</div>
 				<div className="col">
 					<h1 className="display-4 text-center mt-4">{datosvehiculos.name}</h1>

@@ -13,6 +13,7 @@
 }
 
 #img2{
+    object-fit: contain;
     width: 680px;
     height: 500px;
     

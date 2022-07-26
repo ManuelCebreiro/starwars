@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from "react";
-import { Link } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.css";
@@ -8,13 +8,14 @@ export const Demo = (name) => {
 	const { store, actions } = useContext(Context);
 	const datospersonales = store.datos;
 	console.log(datospersonales)
+	const params = useParams()   //hace un objeto con las urls dinamicas
 
 	return (
 
 		<div className="jumbotron ">
 			<div className="row">
 				<div className="col">
-					<img id="img2" src="" />
+					<img id="img2" src={`https://starwars-visualguide.com/assets/img/characters/${params.theid}.jpg`} />
 				</div>
 				<div className="col">
 					<h1 className="display-4 text-center mt-4">{datospersonales.name}</h1>
