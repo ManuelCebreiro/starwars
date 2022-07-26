@@ -1,3 +1,5 @@
+import { Alert } from "bootstrap";
+
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
@@ -14,18 +16,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 		{
 
 			setfavoritos: (name) => {
-			let eliminados = getStore().favoritos.filter(valor => valor == name)   //array de elemento filtrado para que no se repita
-				if(eliminados.length == 0){
 
+			let eliminados = getStore().favoritos.filter(valor => valor == name)   //array de elemento filtrado para que no se repita
+				if(eliminados.length == 0 ){
 					setStore({ favoritos: [...getStore().favoritos, name] })			//una vez que el if se cumple, el setstore funciona
-				}
+				}else
+				alert("¡Ya tienes " + name + " en favorito!")
+				
 			},
 			setfavoritonab: (name) => {
 				setStore({ favnab:  "Último favorito añadido " + name })			//una vez que el if se cumple, el setstore funciona
-				$(favnab).fadeOut(3000);
-
-
-					
+				;					
 				},
 			setborrarfavorito: (elemento) => {									//funcion para borrar elemento de lista
 			let aux = getStore().favoritos.filter(valor => valor !== elemento)  //crear un array para meter el resultado de filter

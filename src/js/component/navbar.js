@@ -1,7 +1,9 @@
 import { Link } from "react-router-dom";
-import React, { useContext } from "react";
+import React, { useContext, useState, Alert } from "react";
 import { Context } from "../store/appContext";
 import Dropdown from 'react-bootstrap/Dropdown';
+
+
 
 
 export const Navbar = () => {
@@ -18,7 +20,7 @@ export const Navbar = () => {
 				</img>
 
 			</Link>
-			<p style={{ color: (`#ffd700`) }}>{favnab}</p>
+			<div id="btn" ><p style={{ color: (`#ffd700`) }}>{favnab}</p></div>
 			<div className="ml-auto">
 				{/* <Link to="/Demo"> */}
 				<Dropdown>
