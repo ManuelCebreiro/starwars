@@ -8,6 +8,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			propiedades: [],
 			favoritos: [],
 			datos: [],
+			favnab: [],
 		},
 		actions:
 		{
@@ -19,6 +20,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 					setStore({ favoritos: [...getStore().favoritos, name] })			//una vez que el if se cumple, el setstore funciona
 				}
 			},
+			setfavoritonab: (name) => {
+				setStore({ favnab:  "Último favorito añadido " + name })			//una vez que el if se cumple, el setstore funciona
+				$(favnab).fadeOut(3000);
+
+
+					
+				},
 			setborrarfavorito: (elemento) => {									//funcion para borrar elemento de lista
 			let aux = getStore().favoritos.filter(valor => valor !== elemento)  //crear un array para meter el resultado de filter
 			setStore({favoritos: aux})    //  como en todos los demas, se llama al setStore, y se guarda en el array que yo quiero, en este caso "favoritos"

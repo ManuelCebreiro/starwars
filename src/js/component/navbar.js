@@ -9,6 +9,7 @@ export const Navbar = () => {
 
 	const { store, actions } = useContext(Context);
 	const fav = store.favoritos
+	const favnab = store.favnab
 
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 px-4 bg-black">
@@ -17,6 +18,7 @@ export const Navbar = () => {
 				</img>
 
 			</Link>
+			<p style={{ color: (`#ffd700`) }}>{favnab}</p>
 			<div className="ml-auto">
 				{/* <Link to="/Demo"> */}
 				<Dropdown>

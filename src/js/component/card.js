@@ -7,6 +7,8 @@ export const Card = ({ uid, name, url, demo }) => {
     // console.log(url)
     const { store, actions } = useContext(Context);
 	const [favorito, setfavorito] = useState([]);
+    const [favoritonab, setfavoritonab] = useState([]);
+
    
 
     return (
@@ -27,6 +29,7 @@ export const Card = ({ uid, name, url, demo }) => {
                         <div>
                             <button type="button" onClick={()=>{
                              actions.setfavoritos(name)
+                             actions.setfavoritonab(name)
 
                             }} className="btn btn-outline-warning">  
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
