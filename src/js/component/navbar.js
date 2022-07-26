@@ -7,9 +7,6 @@ import Dropdown from 'react-bootstrap/Dropdown';
 export const Navbar = () => {
 	const img = "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
 
-	// function borrarfavorito(elemento) {						//funcion para borrar elemento de lista
-	// 	favorito.filter(valor => valor !== elemento)
-	// }
 	const { store, actions } = useContext(Context);
 	const fav = store.favoritos
 
@@ -34,6 +31,10 @@ export const Navbar = () => {
 							key={index}
 							>
 								{texto}
+								<button
+										type="button"
+										className="btn-close "
+										onClick={() => actions.setborrarfavorito(texto)}></button>
 							
 							</Dropdown.Item>
 
