@@ -14,7 +14,7 @@ export const Demo = (name) => {
 		<div className="jumbotron ">
 			<div className="row">
 				<div className="col">
-					<img id="img2" src="https://starwarsblog.starwars.com/wp-content/uploads/2017/03/darth-vader-1-cover-header-1536x864.jpg" />
+					<img id="img2" src="" />
 				</div>
 				<div className="col">
 					<h1 className="display-4 text-center mt-4">{datospersonales.name}</h1>

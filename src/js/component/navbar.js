@@ -1,10 +1,18 @@
-import React from "react";
 import { Link } from "react-router-dom";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
 import Dropdown from 'react-bootstrap/Dropdown';
 
 
 export const Navbar = () => {
 	const img = "http://pngimg.com/uploads/star_wars_logo/star_wars_logo_PNG43.png"
+
+	// function borrarfavorito(elemento) {						//funcion para borrar elemento de lista
+	// 	favorito.filter(valor => valor !== elemento)
+	// }
+	const { store, actions } = useContext(Context);
+	const fav = store.favoritos
+
 	return (
 		<nav className="navbar navbar-light bg-light mb-3 px-4 bg-black">
 			<Link to="/">
@@ -16,14 +24,24 @@ export const Navbar = () => {
 				{/* <Link to="/Demo"> */}
 				<Dropdown>
 					<Dropdown.Toggle variant="primary" id="dropdown-basic">
-						Dropdown Button
+						Favoritos
 					</Dropdown.Toggle>
 
 					<Dropdown.Menu>
-						
-						<Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-						<Dropdown.Item href="#/action-2">Another action</Dropdown.Item>
-						<Dropdown.Item href="#/action-3">Something else</Dropdown.Item>
+						{fav.map((texto, index) =>{
+							return(
+							<Dropdown.Item 
+							key={index}
+							>
+								{texto}
+							
+							</Dropdown.Item>
+
+							)
+							}
+						)	
+						}
+
 					</Dropdown.Menu>
 				</Dropdown>
 

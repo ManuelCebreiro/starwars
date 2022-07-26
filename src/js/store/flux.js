@@ -9,7 +9,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 			favoritos:[],
 			datos:[]
 		},
-		actions: {
+		actions: 
+		{
+			
+			setfavoritos: (name)=>{
+				setStore({ favoritos: [...getStore().favoritos, name]})
+
+			},
+
 			getCharacters: async () => {
 				try {
 					await fetch("https://www.swapi.tech/api/people/")
@@ -22,21 +29,22 @@ const getState = ({ getStore, getActions, setStore }) => {
 				console.log(`No se ha podido cargar el personaje error: ${error}`)	
 				}
 				
-			},
-			getPropertiesCharacters: async () => {
-				try {
-					await fetch("https://www.swapi.tech/api/people/1")
-					.then(res => res.json())
-					.then(data => {
-						setStore({ propiedades: data.result.properties  })
-						console.log(data)
-					})
-				} catch (error) {
-				console.log(`No se ha podido cargar los datos error: ${error}`)	
-				}
+			// },
+			// getPropertiesCharacters: async () => {
+			// 	try {
+			// 		await fetch("https://www.swapi.tech/api/people/1")
+			// 		.then(res => res.json())
+			// 		.then(data => {
+			// 			setStore({ propiedades: data.result.properties  })
+			// 			console.log(data)
+			// 		})
+			// 	} catch (error) {
+			// 	console.log(`No se ha podido cargar los datos error: ${error}`)	
+			// 	}
 				
 
 			},
+		
 
 			getPlanets: async () => {
 				try {
