@@ -34,7 +34,7 @@ export const Navbar = () => {
 							<Dropdown.Item 
 							key={index}
 							>
-								{texto}
+								<Link to={texto.enlace}onClick={() => actions.getId(texto.url)}>{texto.name}</Link> 
 								<button
 										type="button"
 										className="btn-close "

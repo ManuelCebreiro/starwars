@@ -15,11 +15,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 		actions:
 		{
 
-			setfavoritos: (name) => {
+			setfavoritos: (name,enlace,url) => {
 
-			let eliminados = getStore().favoritos.filter(valor => valor == name)   //array de elemento filtrado para que no se repita
+			let eliminados = getStore().favoritos.filter(valor => valor.name == name)   //array de elemento filtrado para que no se repita
 				if(eliminados.length == 0 ){
-					setStore({ favoritos: [...getStore().favoritos, name] })			//una vez que el if se cumple, el setstore funciona
+					setStore({ favoritos: [...getStore().favoritos, {name:name, url:url, enlace:enlace}] })			//una vez que el if se cumple, el setstore funciona
 				}else
 				alert("¡Ya tienes " + name + " en favorito!")
 				
