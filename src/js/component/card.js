@@ -8,14 +8,27 @@ export const Card = ({ uid, name, url, demo }) => {
     const { store, actions } = useContext(Context);
 	const [favorito, setfavorito] = useState([]);
     const [favoritonab, setfavoritonab] = useState([]);
+    const [img, setImage] = useState('https://guaix.fis.ucm.es/~ncl/lucia_crespo/tierra.jpg')
 
     const enlace = `/${demo}/${name}/${uid}`
 
+    useEffect(() =>{
+        getImage();
+    },[]);
+
+    const getImage = () => {
+        let img = `https://starwars-visualguide.com/assets/img/${demo}/${uid}.jpg`;
+        fetch(img).then((res)=>{
+        if(res.ok){
+            setImage(img);
+        }
+        });
+    };
     return (
 
         <div className="cartacss text-center mx-3 my-3" style={{ width: "18rem" }}>
             <div key={uid} className="card " style={{ width: "18rem" }}>
-                <img src={`https://starwars-visualguide.com/assets/img/${demo}/${uid}.jpg`} className="card-img-top" alt="..."></img>
+                <img src={img} className="card-img-top" alt="..."></img>
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>
                     <p className="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
@@ -28,8 +41,8 @@ export const Card = ({ uid, name, url, demo }) => {
                         </div>
                         <div>
                             <button type="button" onClick={()=>{
-                             actions.setfavoritos(name,enlace,url)
-                             actions.setfavoritonab(name)
+                                actions.setfavoritos(name,enlace,url)
+                                actions.setfavoritonab(name)
 
                             }} className="btn btn-outline-warning">  
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" className="bi bi-heart" viewBox="0 0 16 16">
