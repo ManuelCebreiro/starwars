@@ -32,12 +32,13 @@ export const Navbar = () => {
 						{fav.map((texto, index) =>{
 							return(
 							<Dropdown.Item 
+							className="d-flex justify-content-between"
 							key={index}
 							>
-								<Link to={texto.enlace}onClick={() => actions.getId(texto.url)}>{texto.name}</Link> 
+								<Link to={texto.enlace} style={{textDecoration: "none"}} onClick={() => actions.getId(texto.url)}>{texto.name}</Link> 
 								<button
 										type="button"
-										className="btn-close "
+										className="btn-close"
 										onClick={() => actions.setborrarfavorito(texto)}></button>
 							
 							</Dropdown.Item>
