@@ -1,5 +1,7 @@
 # Star Wars Api
-[![Open in Gitpod]([https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star-wars.png](https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star wars.png))
+<div align="center">
+<img src="https://github.com/ManuelCebreiro/webtest/blob/main/src/front/img/fondo%20github.png?raw=true" align="center" style="width: 100%" />
+</div>  
 
 <p align="center">
 <a href="https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b"><img src="https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/src/img/how-to.png?raw=true" /></a>
