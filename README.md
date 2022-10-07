@@ -1,6 +1,6 @@
 # Star Wars Api
 <div align="center">
-<img src="https://github.com/ManuelCebreiro/webtest/blob/main/src/front/img/fondo%20github.png?raw=true" align="center" style="width: 100%" />
+<img src="https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star-wars.png" />
 </div>  
 
 <p align="center">
