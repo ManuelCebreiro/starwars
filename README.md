@@ -7,21 +7,19 @@
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://manuelcebreiro-starwars-u61d58xw7ys.ws-eu70.gitpod.io/)
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git)
 
+### Requisitos:
+- Make sure you are using node version 10 / Asegúrese de estar utilizando la versión 10 de node
 
-### Requirements:
-- Make sure you are using node version 10
-
-1. Install the packages:
+1. Install the packages / Instala los paquetes:
 ```
 $ npm install
 ```
-2. Create a .env file:
+2. Create a .env file / Crea un archivo .env:
 ```
 $ cp .env.example .env
 ```
-3. Start coding! and the webpack dev server with live reload, for windows, mac, linux or Gitpod:
+3. Start coding! / Empieza a programar!:
 
 ```bash
 $ npm run start
