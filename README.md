@@ -24,11 +24,7 @@ $ cp .env.example .env
 ```bash
 $ npm run start
 ```
-
-### Styles
-You can update the `styles/index.css` or create new `.css` files inside `styles/` and import them into your current scss or js files depending on your needs.
-
-### Components
+### Components / Componentes:
 Add more files into your `./src/js/components` or styles folder as you need them and import them into your current files as needed.
 
 **Note (New changes)**: Components have been converted into functions to support the use of hooks:
