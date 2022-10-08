@@ -2,10 +2,10 @@
 <div align="center">
 <img src="https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star%20wars.png" />
 </div>  
-
+⬇⬇Puede entrar en el proyecto directamente aquí ⬇⬇
 <p align="center">
-<a href="[https://www.loom.com/share/f37c6838b3f1496c95111e515e83dd9b"><img src="https://github.com/4GeeksAcademy/react-hello-webapp/blob/master/src/img/how-to.png?raw=true]([https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star-wars.png](https://github.com/ManuelCebreiro/starwars/blob/master/src/img/star%20wars.png)" /></a>
-</p>
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)]([https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git](https://manuelcebreiro-starwars-u61d58xw7ys.ws-eu70.gitpod.io/))
+
 
 
 ### Requirements:
