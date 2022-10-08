@@ -5,7 +5,7 @@
 <p align="center">
 ⬇⬇Puede entrar en el proyecto directamente aquí ⬇⬇
 
-[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)]([https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git](https://manuelcebreiro-starwars-u61d58xw7ys.ws-eu70.gitpod.io/))
+[![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git](https://manuelcebreiro-starwars-u61d58xw7ys.ws-eu70.gitpod.io/)
 
 
 
