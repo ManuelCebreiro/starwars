@@ -24,9 +24,15 @@ const getState = ({ getStore, getActions, setStore }) => {
 				alert("¡Ya tienes " + name + " en favorito!")
 				
 			},
-			setfavoritonab: (name) => {
-				setStore({ favnab:  "Último favorito añadido " + name })			//una vez que el if se cumple, el setstore funciona
-				;					
+			
+				setfavoritonab: (name) => {
+					setStore({ favnab: "Último favorito añadido " + name })			//una vez que el if se cumple, el setstore funciona
+						;
+					setTimeout(function () {
+						setStore({ favnab: "" })
+						console.log("Después de 3 segundos borro frase");
+					}, 3000);
+					console.log("Si llega aqui malo")
 				},
 			setborrarfavorito: (elemento) => {									//funcion para borrar elemento de lista
 			let aux = getStore().favoritos.filter(valor => valor !== elemento)  //crear un array para meter el resultado de filter
